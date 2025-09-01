@@ -30,9 +30,16 @@ body {
 }
 
 .navbar-brand {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
+  font-size: 32px; /* Slightly larger for emphasis */
+  font-weight: 700; /* Bold for a stronger signature effect */
+  color: transparent; /* Transparent for gradient */
+  letter-spacing: 1px; /* Subtle spacing */
+  background: linear-gradient(90deg, #00bcd4, #b3e5fc); /* Keep the blue gradient */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  position: relative; /* For underline positioning */
+  padding-bottom: 2px; /* Space for underline */
 }
 
 .navbar-links a {
@@ -68,7 +75,7 @@ body {
 /* Hero styles */
 .hero {
   height: 100vh;
-  background: url('src/assets/portfolio_image.jpg') no-repeat center center/cover; /* Placeholder wavy background */
+  background: url('public/assets/portfolio_image.jpg') no-repeat center center/cover; /* Placeholder wavy background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +136,6 @@ body {
 
 /* Section styles */
 .section {
-  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,6 +196,12 @@ body {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 480px; /* Fixed height for all cards */
+  overflow: hidden; /* Prevent content from overflowing */
+  position: relative; /* Context for internal positioning */
 }
 
 .card-image {
@@ -203,13 +215,62 @@ body {
 .card h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card p {
   font-size: 14px;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
 }
 
-/* Certification styles */
+.tech-logos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+  margin-top: auto; /* Push to bottom of flex column */
+  padding-bottom: 10px; /* Ensure space at bottom */
+  width: 100%; /* Full width for alignment */
+}
+
+.tech-logo-item {
+  position: relative;
+  display: inline-block;
+}
+
+.tech-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.tech-logo-item:hover .tech-logo {
+  transform: scale(1.2);
+}
+
+.tech-logo-item:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+}
 /* Certification styles */
 .certification-list {
   display: flex;
@@ -361,4 +422,66 @@ body {
 
 .carousel-btn:hover {
   background: rgba(255, 255, 255, 0.4);
+}
+
+/* ... (previous CSS remains the same) ... */
+
+/* Footer styles */
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 50px;
+  text-align: center;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border for separation */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #00bcd4; /* Blue accent for titles */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #b3e5fc; /* Lighter blue on hover */
+}
+
+.footer-copyright {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+.footer-copyright p {
+  font-size: 12px;
+  color: #ccc;
 }

@@ -8,6 +8,7 @@ export default function Navbar() {
     { id: "projects", label: "Projects" },
     { id: "certifications", label: "Certifications" },
     { id: "skills", label: "Skills" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -28,8 +29,7 @@ export default function Navbar() {
             {it.label}
           </ScrollLink>
         ))}
-
-        <button className="say-hi-btn">Say Hi</button>
+        <a href="public/assets/CV.pdf" download="Waleed_Shahid_CV.pdf">Resume</a>
       </div>
     </nav>
   );

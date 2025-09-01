@@ -1,6 +1,7 @@
 import React from 'react';
 import { Element } from "react-scroll";
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 function Hero() {
   return (
@@ -15,7 +16,18 @@ function Hero() {
     <h1>Full Stack Developer</h1>
         <h2>Waleed Shahid</h2>
         <p>I build scalable apps that dont just work — they perform. From .NET to Python, React to ML, I turn complex problems into sleek, production-ready solutions.</p>
-        <button className="see-work-btn">See My Work</button>
+        <ScrollLink
+                    key="projects"
+                    to="projects"
+                    spy={true}          // apply activeClass when the section is in view
+                    smooth={true}
+                    offset={-70}        // adjust for fixed navbar height
+                    duration={600}
+                    className="nav-link" // class for styling (see CSS below)
+                    activeClass="active-link"
+                  >
+                    <button className="see-work-btn">See My Work</button>
+                  </ScrollLink>
     </motion.div>
     </Element>
   );

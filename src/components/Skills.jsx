@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 
-const skillGroups = [
+export const skillGroups = [
   {
     title: 'Languages',
     skills: [
@@ -38,11 +38,17 @@ const skillGroups = [
   {
     title: 'DevOps',
     skills: [
-      { name: 'Azure', image: 'src/assets/Azure.png' }, // Updated URL
-      { name: 'AWS', image: 'src/assets/aws.png' }, // Updated to a reliable CDN
+      { name: 'Azure', image: 'public/assets/Azure.png' }, // Updated URL
+      { name: 'AWS', image: 'public/assets/aws.png' }, // Updated to a reliable CDN
       { name: 'GCP', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' },
     ],
-  },
+  },{
+    title: 'Workflow Automation',
+    skills: [
+      { name: 'Power Automate', image: 'public/assets/PA.png' }, // Updated URL
+      { name: 'Databricks', image: 'public/assets/db.png' }, // Updated to a reliable CDN
+     ],
+  }
 ];
 
 function Skills() {
