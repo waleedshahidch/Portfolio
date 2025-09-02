@@ -12,24 +12,41 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">Waleed</div>
-      <div className="navbar-links">
+    <nav className="navbar flex items-center justify-between px-6 py-4 bg-black text-white">
+      {/* Logo */}
+      <div className="navbar-brand flex items-center pl-6">
+        <img
+  src="/assets/logo.png"
+  alt="Waleed Logo"
+  className="mr-3 mt-1"
+  style={{ width: "50px", height: "50px", objectFit: "contain", marginLeft: "10%" }}
+/>
+
+      </div>
+
+      {/* Links */}
+      <div className="navbar-links flex gap-6">
         {items.map((it) => (
           <ScrollLink
             key={it.id}
             to={it.id}
-            spy={true}          // apply activeClass when the section is in view
+            spy={true}
             smooth={true}
-            offset={-70}        // adjust for fixed navbar height
+            offset={-70}
             duration={600}
-            className="nav-link" // class for styling (see CSS below)
+            className="nav-link cursor-pointer hover:text-gray-400 transition"
             activeClass="active-link"
           >
             {it.label}
           </ScrollLink>
         ))}
-        <a href="public/assets/CV.pdf" download="Waleed_Shahid_CV.pdf">Resume</a>
+        <a
+          href="/assets/CV.pdf"
+          download="Waleed_Shahid_CV.pdf"
+          className="hover:text-gray-400 transition"
+        >
+          Resume
+        </a>
       </div>
     </nav>
   );
