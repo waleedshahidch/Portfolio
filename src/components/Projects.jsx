@@ -32,42 +32,42 @@ const projects = [
   {
     name: 'Cognitive Integrity Management for GIS systems',
     description: 'Implemented cognitive integrity management system to process geographical information system data for oil and gas pipelines. It included processing data for detecting erosion, dents or failures in any parts of the pipelines identified through cpig devices.',
-    image: 'public/assets/OBS.png',
+    image: '/assets/OBS.png',
   },
   {
     name: 'Psychometric Assessment Evaluations for talent aquistion and maintenance and surveys',
     description: 'Implemented a system for evaluating candidates before hiring through differed psychometric assessments created by a team of competitive psycologists as well as implementing 360 degree feedback and engagement surveys.',
-    image: 'public/assets/sacs.jpg',
+    image: '/assets/sacs.jpg',
   },
   {
     name: 'Health Care Insurance products for agencies/agents',
     description: 'Developed a web application that provided the insurance agencies/agents a complete end to end flow to create their insurance products and generate leads, convert them into sales and manage finances all in a single application.',
-    image: 'public/assets/AMS.jpg',
+    image: '/assets/AMS.jpg',
   },
   {
     name: 'Revenue Cycle Management for medical claims processing & arbitration',
     description: 'Implemented a system for revenue cycle management to make it easier for medical billers to manage and process claim through multiple departments including appeal processing , aribitration & litigation as well.',
-    image: 'public/assets/rcm.jpg',
+    image: '/assets/rcm.jpg',
   },
   {
     name: 'e-Real Estate Management system for sale and purchase of properties',
     description: 'Developed a platform where sellers can signup and sell their properties through publishing advertisements which buyers can see and contact the sellers through the chat system within the application. The system also had the capability of predicting property prices for buyers with an accuracy of 94%.',
-    image: 'public/assets/realestate.png',
+    image: '/assets/realestate.png',
   },
   {
     name: 'Extension created for shoppers just like capital one',
     description: 'Developed an extension that would scrap data from different websites such as ebay, walmart, dhgate, target etc for the product user has in his cart on any store to get discounted or better prices without searching each and every website.',
-    image: 'public/assets/cart.png',
+    image: '/assets/cart.png',
   },
   {
     name: 'Inventory Management System for factory distribution wing',
     description: 'Created an inventory management system for a distribution organization to keep track of their sales and inventory updates as well as reporting low inventory or other issues to the management using power bi.',
-    image: 'public/assets/inventory.png',
+    image: '/assets/inventory.png',
   },
   {
     name: 'Automation flow for updating higher management dashboards using Power Automate',
     description: 'Implemented a power automate flow that used Microsoft Planner boards and charts, converted them into json objects using only required features and dumped them in an azure block in an incremental way which was connected to a power bi dashboard. That dashboard was updated using the workflow as well.',
-    image: 'public/assets/workflow.png',
+    image: '/assets/workflow.png',
   },
 ];
 

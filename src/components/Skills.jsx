@@ -38,15 +38,15 @@ export const skillGroups = [
   {
     title: 'DevOps',
     skills: [
-      { name: 'Azure', image: 'public/assets/Azure.png' }, // Updated URL
-      { name: 'AWS', image: 'public/assets/aws.png' }, // Updated to a reliable CDN
+      { name: 'Azure', image: '/assets/Azure.png' }, // Updated URL
+      { name: 'AWS', image: '/assets/aws.png' }, // Updated to a reliable CDN
       { name: 'GCP', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' },
     ],
   },{
     title: 'Workflow Automation',
     skills: [
-      { name: 'Power Automate', image: 'public/assets/PA.png' }, // Updated URL
-      { name: 'Databricks', image: 'public/assets/db.png' }, // Updated to a reliable CDN
+      { name: 'Power Automate', image: '/assets/PA.png' }, // Updated URL
+      { name: 'Databricks', image: '/assets/db.png' }, // Updated to a reliable CDN
      ],
   }
 ];
